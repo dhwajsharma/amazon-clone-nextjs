@@ -11,7 +11,6 @@ const Product = ({ id, title, price, description, category, image }) => {
     const [rating] = useState(
         Math.floor(Math.random() * (MAX_RATING - MIN_RATING + 1)) + MIN_RATING
     )
-
     const [hasPrime] = useState(
         Math.random() < 0.5
     )
