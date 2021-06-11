@@ -15,7 +15,7 @@ const CheckoutProduct = ({ id, title, price, rating, description, category, imag
         }
 
         // Push item in redux
-        dispatch(addToBasket());
+        dispatch(addToBasket(product));
     }
 
     const removeItemFromBasket = () => {
