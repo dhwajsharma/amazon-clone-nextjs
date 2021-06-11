@@ -21,7 +21,7 @@ const Product = ({ id, title, price, description, category, image }) => {
 
     const addItemToBasket = () => {
         const product = {
-            id, title, price, description, category, image
+            id, title, price, rating, description, category, image, hasPrime
         };
 
         // Sending the product as an action to the REDUX store(the basket slice).
@@ -37,7 +37,7 @@ const Product = ({ id, title, price, description, category, image }) => {
 
             <div className="flex">
                 {Array(rating).fill().map((_, i) => (
-                    <StarIcon className="h-5 text-yellow-500" />
+                    <StarIcon key={i} className="h-5 text-yellow-500" />
                 ))}
             </div>
 
